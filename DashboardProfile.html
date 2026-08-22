@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!----------------- Navbar ----------------->
+    <nav
+      class="relative z-10 flex flex-row justify-between items-center w-full pl-4 pr-4 pt-2 pb-2 bg-amber-100 shadow-md"
+    >
+      <div class="leftNav flex flex-row gap-2 justify-center">
+        <img
+          class="hidden md:block"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZsb3dlcjItaWNvbiBsdWNpZGUtZmxvd2VyLTIiPjxwYXRoIGQ9Ik0xMiA1YTMgMyAwIDEgMSAzIDNtLTMtM2EzIDMgMCAxIDAtMyAzbTMtM3YxTTkgOGEzIDMgMCAxIDAgMyAzTTkgOGgxbTUgMGEzIDMgMCAxIDEtMyAzbTMtM2gtMW0tMiAzdi0xIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSI4IiByPSIyIi8+PHBhdGggZD0iTTEyIDEwdjEyIi8+PHBhdGggZD0iTTEyIDIyYzQuMiAwIDctMS42NjcgNy01LTQuMiAwLTcgMS42NjctNyA1WiIvPjxwYXRoIGQ9Ik0xMiAyMmMtNC4yIDAtNy0xLjY2Ny03LTUgNC4yIDAgNyAxLjY2NyA3IDVaIi8+PC9zdmc+"
+          alt="icon"
+        />
+        <img
+          class="md:hidden"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lbnUtaWNvbiBsdWNpZGUtbWVudSI+PHBhdGggZD0iTTQgNWgxNiIvPjxwYXRoIGQ9Ik00IDEyaDE2Ii8+PHBhdGggZD0iTTQgMTloMTYiLz48L3N2Zz4="
+          alt="icon"
+        />
+        <h1 class="text-2xl font-[family-name:Literata]">Atelier de Flora</h1>
+      </div>
+
+      <div class="rightNav flex items-center">
+        <div class="border-r-1 flex flex-row gap-8 pr-8">
+          <h2 class="homeNav hidden md:block">Home</h2>
+          <h2 class="shopNav hidden md:block">Shop</h2>
+          <h2 class="storyNav hidden md:block">Story</h2>
+        </div>
+
+        <div class="flex flex-row gap-8 items-center">
+          <div
+            class="hidden md:flex flex-row border-slate-200 border-solid border-2 rounded-full p-2 ml-4"
+          >
+            <img
+              class="h-fit"
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNlYXJjaC1pY29uIGx1Y2lkZS1zZWFyY2giPjxwYXRoIGQ9Im0yMSAyMS00LjM0LTQuMzQiLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjExIiByPSI4Ii8+PC9zdmc+"
+            />
+            <textarea placeholder="Search..." class="h-6"></textarea>
+          </div>
+          <img
+            class="profile h-fit"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNpcmNsZS11c2VyLWljb24gbHVjaWRlLWNpcmNsZS11c2VyIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTAiIHI9IjMiLz48cGF0aCBkPSJNNyAyMC42NjJWMTlhMiAyIDAgMCAxIDItMmg2YTIgMiAwIDAgMSAyIDJ2MS42NjIiLz48L3N2Zz4="
+          />
+          <img
+            class="cart h-fit"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNob3BwaW5nLWNhcnQtaWNvbiBsdWNpZGUtc2hvcHBpbmctY2FydCI+PGNpcmNsZSBjeD0iOCIgY3k9IjIxIiByPSIxIi8+PGNpcmNsZSBjeD0iMTkiIGN5PSIyMSIgcj0iMSIvPjxwYXRoIGQ9Ik0yLjA1IDIuMDVoMmwyLjY2IDEyLjQyYTIgMiAwIDAgMCAyIDEuNThoOS43OGEyIDIgMCAwIDAgMS45NS0xLjU3bDEuNjUtNy40M0g1LjEyIi8+PC9zdmc+"
+          />
+        </div>
+      </div>
+    </nav>
+    <!----------------- Main ----------------->
+    <main class="flex-1 flex flex-col">
+      <div class="p-4 bg-olive-200 flex-1">
+        <div
+          class="MyAccountHeader font-[family-name:Literata] text-xl font-bold pb-4"
+        >
+          <h1>My Account</h1>
+        </div>
+
+        <!----------- Content ------------>
+        <div class="DashboardContent flex flex-row">
+          <!------- Left Menu Content ------->
+          <div
+            class="DashBoardMenu hidden md:flex flex-col gap-4 w-1/3 font-[family-name:Plus_Jakarta_Sans] rounded-xl bg-amber-50 justify-center shadow-md"
+          >
+            <div
+              class="topMenu flex flex-col gap-5 m-4 mb-0 border-b-1 pb-4 border-gray-300"
+            >
+              <div
+                class="MyAccountMenu flex gap-3 bg-olive-500 text-white rounded-md p-1"
+              >
+                <img
+                  class="MyAccountlogo"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXVzZXItaWNvbiBsdWNpZGUtdXNlciI+PHBhdGggZD0iTTE5IDIxdi0yYTQgNCAwIDAgMC00LTRIOWE0IDQgMCAwIDAtNCA0djIiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiLz48L3N2Zz4="
+                  alt="Account Logo"
+                />
+                <h2>My Account</h2>
+              </div>
+              <div class="PurchasesMenu flex gap-3">
+                <img
+                  class="PurchasesLogo"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXZhbi1pY29uIGx1Y2lkZS12YW4iPjxwYXRoIGQ9Ik0xMyA2djVhMSAxIDAgMCAwIDEgMWg2LjEwMmExIDEgMCAwIDEgLjcxMi4yOThsLjg5OC45MWExIDEgMCAwIDEgLjI4OC43MDJWMTdhMSAxIDAgMCAxLTEgMWgtMyIvPjxwYXRoIGQ9Ik01IDE4SDNhMSAxIDAgMCAxLTEtMVY4YTIgMiAwIDAgMSAyLTJoMTJjMS4xIDAgMi4xLjggMi40IDEuOGwxLjE3NiA0LjIiLz48cGF0aCBkPSJNOSAxOGg1Ii8+PGNpcmNsZSBjeD0iMTYiIGN5PSIxOCIgcj0iMiIvPjxjaXJjbGUgY3g9IjciIGN5PSIxOCIgcj0iMiIvPjwvc3ZnPg=="
+                  alt="Purchases Logo"
+                />
+                <h2>Purchases</h2>
+              </div>
+              <div class="BouquetMenu flex gap-3">
+                <img
+                  class="BouquetLogo"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZsb3dlcjItaWNvbiBsdWNpZGUtZmxvd2VyLTIiPjxwYXRoIGQ9Ik0xMiA1YTMgMyAwIDEgMSAzIDNtLTMtM2EzIDMgMCAxIDAtMyAzbTMtM3YxTTkgOGEzIDMgMCAxIDAgMyAzTTkgOGgxbTUgMGEzIDMgMCAxIDEtMyAzbTMtM2gtMW0tMiAzdi0xIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSI4IiByPSIyIi8+PHBhdGggZD0iTTEyIDEwdjEyIi8+PHBhdGggZD0iTTEyIDIyYzQuMiAwIDctMS42NjcgNy01LTQuMiAwLTcgMS42NjctNyA1WiIvPjxwYXRoIGQ9Ik0xMiAyMmMtNC4yIDAtNy0xLjY2Ny03LTUgNC4yIDAgNyAxLjY2NyA3IDVaIi8+PC9zdmc+"
+                  alt="Bouquet Logo"
+                />
+                <h2>Bouquet</h2>
+              </div>
+              <div class="MyAddressMenu flex gap-3">
+                <img
+                  class="MyAddressLogo"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1hcC1waW4taG91c2UtaWNvbiBsdWNpZGUtbWFwLXBpbi1ob3VzZSI+PHBhdGggZD0iTTE1IDIyYTEgMSAwIDAgMS0xLTF2LTRhMSAxIDAgMCAxIC40NDUtLjgzMmwzLTJhMSAxIDAgMCAxIDEuMTEgMGwzIDJBMSAxIDAgMCAxIDIyIDE3djRhMSAxIDAgMCAxLTEgMXoiLz48cGF0aCBkPSJNMTggMTBhOCA4IDAgMCAwLTE2IDBjMCA0Ljk5MyA1LjUzOSAxMC4xOTMgNy4zOTkgMTEuNzk5YTEgMSAwIDAgMCAuNjAxLjIiLz48cGF0aCBkPSJNMTggMjJ2LTMiLz48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIzIi8+PC9zdmc+"
+                  alt="MyAddress Logo"
+                />
+                <h2>My Address</h2>
+              </div>
+              <div class="FavoriteMenu flex gap-3">
+                <img
+                  class="FavoriteLogo"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWhlYXJ0LWljb24gbHVjaWRlLWhlYXJ0Ij48cGF0aCBkPSJNMiA5LjVhNS41IDUuNSAwIDAgMSA5LjU5MS0zLjY3Ni41Ni41NiAwIDAgMCAuODE4IDBBNS40OSA1LjQ5IDAgMCAxIDIyIDkuNWMwIDIuMjktMS41IDQtMyA1LjVsLTUuNDkyIDUuMzEzYTIgMiAwIDAgMS0zIC4wMTlMNSAxNWMtMS41LTEuNS0zLTMuMi0zLTUuNSIvPjwvc3ZnPg=="
+                  alt="Favorite Logo"
+                />
+                <h2>Favorite</h2>
+              </div>
+            </div>
+            <div class="BottomMenu flex flex-col gap-3 m-4 mt-0">
+              <div class="SettingMenu flex gap-3">
+                <img
+                  class="SettingLogo"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNldHRpbmdzLWljb24gbHVjaWRlLXNldHRpbmdzIj48cGF0aCBkPSJNOS42NzEgNC4xMzZhMi4zNCAyLjM0IDAgMCAxIDQuNjU5IDAgMi4zNCAyLjM0IDAgMCAwIDMuMzE5IDEuOTE1IDIuMzQgMi4zNCAwIDAgMSAyLjMzIDQuMDMzIDIuMzQgMi4zNCAwIDAgMCAwIDMuODMxIDIuMzQgMi4zNCAwIDAgMS0yLjMzIDQuMDMzIDIuMzQgMi4zNCAwIDAgMC0zLjMxOSAxLjkxNSAyLjM0IDIuMzQgMCAwIDEtNC42NTkgMCAyLjM0IDIuMzQgMCAwIDAtMy4zMi0xLjkxNSAyLjM0IDIuMzQgMCAwIDEtMi4zMy00LjAzMyAyLjM0IDIuMzQgMCAwIDAgMC0zLjgzMUEyLjM0IDIuMzQgMCAwIDEgNi4zNSA2LjA1MWEyLjM0IDIuMzQgMCAwIDAgMy4zMTktMS45MTUiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIzIi8+PC9zdmc+"
+                  alt="Setting Logo"
+                />
+                <h2>Setting</h2>
+              </div>
+              <div class="HelpMenu flex gap-3">
+                <img
+                  class="HelpLogo"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNpcmNsZS1xdWVzdGlvbi1tYXJrLWljb24gbHVjaWRlLWNpcmNsZS1xdWVzdGlvbi1tYXJrIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxwYXRoIGQ9Ik05LjA5IDlhMyAzIDAgMCAxIDUuODMgMWMwIDItMyAzLTMgMyIvPjxwYXRoIGQ9Ik0xMiAxN2guMDEiLz48L3N2Zz4="
+                  alt="Help Logo"
+                />
+                <h2>Help</h2>
+              </div>
+            </div>
+          </div>
+
+          <!------- Right Content ------->
+          <div
+            class="MyAccountContent font-[family-name:Literata] w-full md:ml-8 md:mr-8 p-8 bg-amber-50 rounded-2xl shadow-md"
+          >
+            <div class="Head flex flex-col justify-center items-center pb-2 md:flex-row md:justify-start">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNpcmNsZS11c2VyLXJvdW5kLWljb24gbHVjaWRlLWNpcmNsZS11c2VyLXJvdW5kIj48cGF0aCBkPSJNMTcuOTI1IDIwLjA1NmE2IDYgMCAwIDAtMTEuODUxLjAwMSIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTEiIHI9IjQiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjwvc3ZnPg=="
+              />
+              <div class="p-2 flex flex-col items-center md:items-start">
+                <h2>Username</h2>
+                <p class="text-xs text-gray-400">Edit display image</p>
+              </div>
+            </div>
+            <div>
+              <div class="">
+                <div class="Name grid md:grid-cols-2 md:gap-8">
+                  <div>
+                    <label class="">First Name</label>
+                    <input class="w-full bg-gray-200 rounded-md" />
+                  </div>
+                  <div>
+                    <label class="">Last Name</label>
+                    <input class="w-full bg-gray-200 rounded-md" />
+                  </div>
+                </div>
+                <div class="Address grid md:grid-cols-2 md:gap-8">
+                  <div>
+                    <label class="">Address</label>
+                    <input class="w-full bg-gray-200 rounded-md" />
+                  </div>
+                  <div>
+                    <label class="">City</label>
+                    <input class="w-full bg-gray-200 rounded-md" />
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 md:gap-8">
+                  <div class="grid grid-cols-3 w-full gap-2">
+                    <div class="col-span-2">
+                      <label>Date of Birth</label>
+                      <input class="w-full bg-gray-200 rounded-md" />
+                    </div>
+                    <div>
+                      <label class="">Gender</label>
+                      <input class="w-full bg-gray-200 rounded-md" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="">Contact</label>
+                    <input class="w-full bg-gray-200 rounded-md" />
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 md:gap-8">
+                  <div>
+                    <label class="">E-mail</label>
+                    <input class="w-full bg-gray-200 rounded-md" />
+                  </div>
+                  <div class="hidden md:flex justify-end gap-4">
+                    <button
+                      class="bg-green-400 text-white rounded-full mt-2 mb-2 pl-2 pr-2 hover:cursor-pointer"
+                    >
+                      Confirm
+                    </button>
+                    <button
+                      class="bg-red-400 text-white rounded-full mt-2 mb-2 pl-2 pr-2 hover:cursor-pointer"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 md:gap-8">
+                  <div>
+                    <label class="">Password</label>
+                    <input class="w-full bg-gray-200 rounded-md" />
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 md:gap-8">
+                  <div>
+                    <label class="">Re-Enter Password</label>
+                    <input class="w-full bg-gray-200 rounded-md" />
+                  </div>
+                </div>
+                <div class="flex md:hidden justify-end gap-4">
+                  <button
+                    class="bg-green-400 text-white rounded-full mt-2 mb-2 pl-2 pr-2 hover:cursor-pointer"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    class="bg-red-400 text-white rounded-full mt-2 mb-2 pl-2 pr-2 hover:cursor-pointer"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="flex justify-between p-4 font-[family-name:Plus_Jakarta_Sans] bg-olive-300"
+    >
+      <div class="leftFooter">
+        <div>
+          <h2 class="font-[family-name:Literata]">Atelier de Flora</h2>
+          <p class="text-xs">© 2026 Atelier de Flora</p>
+        </div>
+      </div>
+      <div class="rightFooter flex flex-row items-center gap-4 text-sm">
+        <p>Shipping</p>
+        <p>Contact Us</p>
+      </div>
+    </footer>
+  </body>
+</html>
