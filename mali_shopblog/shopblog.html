@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier de Flora</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style type="text/tailwindcss">
+    @theme {
+        --color-primary:   #929B91;
+        --color-secondary: #F9F6F0;
+        --color-tertiary:  #F3F3F0;
+        --color-neutral:   #4A4A4A;
+        --font-display: 'Literata', serif;
+        --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-display { font-family: 'Literata', serif; }
+  </style>
+</head>
+
+<body class="bg-secondary text-neutral">
+  <svg style="display:none">
+    <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </symbol>
+
+    <symbol id="icon-account" viewBox="0 0 36 36">
+      <path fill="currentColor" d="M11.85 23.1C12.7 22.45 13.65 21.9375 14.7 21.5625C15.75 21.1875 16.85 21 18 21C19.15 21 20.25 21.1875 21.3 21.5625C22.35 21.9375 23.3 22.45 24.15 23.1C24.7333 22.4167 25.1875 21.6417 25.5125 20.775C25.8375 19.9083 26 18.9833 26 18C26 15.7833 25.2208 13.8958 23.6625 12.3375C22.1042 10.7792 20.2167 10 18 10C15.7833 10 13.8958 10.7792 12.3375 12.3375C10.7792 13.8958 10 15.7833 10 18C10 18.9833 10.1625 19.9083 10.4875 20.775C10.8125 21.6417 11.2667 22.4167 11.85 23.1ZM18 19C17.0167 19 16.1875 18.6625 15.5125 17.9875C14.8375 17.3125 14.5 16.4833 14.5 15.5C14.5 14.5167 14.8375 13.6875 15.5125 13.0125C16.1875 12.3375 17.0167 12 18 12C18.9833 12 19.8125 12.3375 20.4875 13.0125C21.1625 13.6875 21.5 14.5167 21.5 15.5C21.5 16.4833 21.1625 17.3125 20.4875 17.9875C19.8125 18.6625 18.9833 19 18 19ZM18 28C16.6167 28 15.3167 27.7375 14.1 27.2125C12.8833 26.6875 11.825 25.975 10.925 25.075C10.025 24.175 9.3125 23.1167 8.7875 21.9C8.2625 20.6833 8 19.3833 8 18C8 16.6167 8.2625 15.3167 8.7875 14.1C9.3125 12.8833 10.025 11.825 10.925 10.925C11.825 10.025 12.8833 9.3125 14.1 8.7875C15.3167 8.2625 16.6167 8 18 8C19.3833 8 20.6833 8.2625 21.9 8.7875C23.1167 9.3125 24.175 10.025 25.075 10.925C25.975 11.825 26.6875 12.8833 27.2125 14.1C27.7375 15.3167 28 16.6167 28 18C28 19.3833 27.7375 20.6833 27.2125 21.9C26.6875 23.1167 25.975 24.175 25.075 25.075C24.175 25.975 23.1167 26.6875 21.9 27.2125C20.6833 27.7375 19.3833 28 18 28ZM18 26C18.8833 26 19.7167 25.8708 20.5 25.6125C21.2833 25.3542 22 24.9833 22.65 24.5C22 24.0167 21.2833 23.6458 20.5 23.3875C19.7167 23.1292 18.8833 23 18 23C17.1167 23 16.2833 23.1292 15.5 23.3875C14.7167 23.6458 14 24.0167 13.35 24.5C14 24.9833 14.7167 25.3542 15.5 25.6125C16.2833 25.8708 17.1167 26 18 26ZM18 17C18.4333 17 18.7917 16.8583 19.075 16.575C19.3583 16.2917 19.5 15.9333 19.5 15.5C19.5 15.0667 19.3583 14.7083 19.075 14.425C18.7917 14.1417 18.4333 14 18 14C17.5667 14 17.2083 14.1417 16.925 14.425C16.6417 14.7083 16.5 15.0667 16.5 15.5C16.5 15.9333 16.6417 16.2917 16.925 16.575C17.2083 16.8583 17.5667 17 18 17Z"/>
+    </symbol>
+
+    <symbol id="icon-cart" viewBox="0 0 22 19">
+      <path fill="currentColor" d="M4.51288 19C4.06288 19 3.66288 18.8625 3.31288 18.5875C2.96288 18.3125 2.72121 17.9583 2.58788 17.525L0.0378788 8.275C-0.0454545 7.95833 0.00871213 7.66667 0.200379 7.4C0.392045 7.13333 0.654545 7 0.987879 7H5.73788L10.1379 0.45C10.2212 0.316667 10.3379 0.208333 10.4879 0.125C10.6379 0.0416667 10.7962 0 10.9629 0C11.1295 0 11.2879 0.0416667 11.4379 0.125C11.5879 0.208333 11.7045 0.316667 11.7879 0.45L16.1879 7H20.9879C21.3212 7 21.5837 7.13333 21.7754 7.4C21.967 7.66667 22.0212 7.95833 21.9379 8.275L19.3879 17.525C19.2545 17.9583 19.0129 18.3125 18.6629 18.5875C18.3129 18.8625 17.9129 19 17.4629 19H4.51288ZM4.48788 17H17.4879L19.6879 9H2.28788L4.48788 17ZM10.9879 15C11.5379 15 12.0087 14.8042 12.4004 14.4125C12.792 14.0208 12.9879 13.55 12.9879 13C12.9879 12.45 12.792 11.9792 12.4004 11.5875C12.0087 11.1958 11.5379 11 10.9879 11C10.4379 11 9.96704 11.1958 9.57538 11.5875C9.18371 11.9792 8.98788 12.45 8.98788 13C8.98788 13.55 9.18371 14.0208 9.57538 14.4125C9.96704 14.8042 10.4379 15 10.9879 15ZM8.16288 7H13.7879L10.9629 2.8L8.16288 7Z"/>
+    </symbol>
+
+    <symbol id="icon-flower" viewBox="0 0 18 21">
+      <path fill="currentColor" d="M9 9.5C9.7 9.5 10.2917 9.25833 10.775 8.775C11.2583 8.29167 11.5 7.7 11.5 7C11.5 6.3 11.2583 5.70833 10.775 5.225C10.2917 4.74167 9.7 4.5 9 4.5C8.3 4.5 7.70833 4.74167 7.225 5.225C6.74167 5.70833 6.5 6.3 6.5 7C6.5 7.7 6.74167 8.29167 7.225 8.775C7.70833 9.25833 8.3 9.5 9 9.5ZM9 14C8.35 14 7.7625 13.8208 7.2375 13.4625C6.7125 13.1042 6.33333 12.6333 6.1 12.05C6.01667 12.05 5.94167 12.0542 5.875 12.0625C5.80833 12.0708 5.73333 12.075 5.65 12.075C4.78333 12.075 4.04167 11.7667 3.425 11.15C2.80833 10.5333 2.5 9.79167 2.5 8.925C2.5 8.575 2.55833 8.2375 2.675 7.9125C2.79167 7.5875 2.96667 7.28333 3.2 7C2.98333 6.71667 2.81667 6.4125 2.7 6.0875C2.58333 5.7625 2.525 5.425 2.525 5.075C2.525 4.20833 2.82917 3.46667 3.4375 2.85C4.04583 2.23333 4.78333 1.925 5.65 1.925C5.73333 1.925 5.80833 1.92917 5.875 1.9375C5.94167 1.94583 6.01667 1.95 6.1 1.95C6.33333 1.36667 6.7125 0.895833 7.2375 0.5375C7.7625 0.179167 8.35 0 9 0C9.65 0 10.2375 0.179167 10.7625 0.5375C11.2875 0.895833 11.6667 1.36667 11.9 1.95C11.9833 1.95 12.0583 1.94583 12.125 1.9375C12.1917 1.92917 12.2667 1.925 12.35 1.925C13.2167 1.925 13.9542 2.23333 14.5625 2.85C15.1708 3.46667 15.475 4.20833 15.475 5.075C15.475 5.425 15.4208 5.7625 15.3125 6.0875C15.2042 6.4125 15.0333 6.71667 14.8 7C15.0167 7.28333 15.1833 7.5875 15.3 7.9125C15.4167 8.2375 15.475 8.575 15.475 8.925C15.475 9.79167 15.1708 10.5333 14.5625 11.15C13.9542 11.7667 13.2167 12.075 12.35 12.075C12.2667 12.075 12.1917 12.0708 12.125 12.0625C12.0583 12.0542 11.9833 12.05 11.9 12.05C11.6667 12.6333 11.2875 13.1042 10.7625 13.4625C10.2375 13.8208 9.65 14 9 14ZM9 21C9 19.7667 9.2375 18.6042 9.7125 17.5125C10.1875 16.4208 10.8333 15.4667 11.65 14.65C12.4667 13.8333 13.4208 13.1875 14.5125 12.7125C15.6042 12.2375 16.7667 12 18 12C18 13.2333 17.7625 14.3958 17.2875 15.4875C16.8125 16.5792 16.1667 17.5333 15.35 18.35C14.5333 19.1667 13.5792 19.8125 12.4875 20.2875C11.3958 20.7625 10.2333 21 9 21ZM9 21C9 19.7667 8.7625 18.6042 8.2875 17.5125C7.8125 16.4208 7.16667 15.4667 6.35 14.65C5.53333 13.8333 4.57917 13.1875 3.4875 12.7125C2.39583 12.2375 1.23333 12 0 12C0 13.2333 0.2375 14.3958 0.7125 15.4875C1.1875 16.5792 1.83333 17.5333 2.65 18.35C3.46667 19.1667 4.42083 19.8125 5.5125 20.2875C6.60417 20.7625 7.76667 21 9 21Z" fill="#586158"/>
+    </symbol>
+
+    <symbol id="icon-search" viewBox="0 0 18 18">
+      <path fill="currentColor" d="M16.1384 17.1922L9.85766 10.9115C9.35766 11.3243 8.78266 11.6474 8.13266 11.8807C7.48266 12.114 6.81023 12.2307 6.11536 12.2307C4.40767 12.2307 2.96152 11.6384 1.77691 10.4538C0.592305 9.26919 0 7.82304 0 6.11536C0 4.40767 0.592305 2.96152 1.77691 1.77691C2.96152 0.592305 4.40767 0 6.11536 0C7.82304 0 9.26919 0.592305 10.4538 1.77691C11.6384 2.96152 12.2307 4.40767 12.2307 6.11536C12.2307 6.82946 12.1108 7.51151 11.8711 8.16151C11.6314 8.81151 11.3115 9.37689 10.9115 9.85766L17.1922 16.1384L16.1384 17.1922ZM6.11536 10.7307C7.40382 10.7307 8.49517 10.2836 9.3894 9.3894C10.2836 8.49517 10.7307 7.40382 10.7307 6.11536C10.7307 4.82689 10.2836 3.73554 9.3894 2.84131C8.49517 1.94708 7.40382 1.49996 6.11536 1.49996C4.82689 1.49996 3.73554 1.94708 2.84131 2.84131C1.94708 3.73554 1.49996 4.82689 1.49996 6.11536C1.49996 7.40382 1.94708 8.49517 2.84131 9.3894C3.73554 10.2836 4.82689 10.7307 6.11536 10.7307Z" fill="#4A4A4A"/>
+    </symbol>
+  </svg>
+
+  <!-- Mobile header -->
+  <div class="md:hidden">
+    <header class="border-neutral/10 flex items-center justify-between px-5 py-3 shadow-sm">
+      <button aria-label="Menu" class="text-neutral/70 hover:text-primary transition-colors">
+        <svg class="w-5 h-5"><use href="#icon-menu" /></svg>
+      </button>
+      <a href="#" class="font-display text-xl font-bold tracking-wide text-neutral">Atelier de Flora</a>
+      <div class="flex items-center gap-4">
+        <button aria-label="Account" class="text-neutral/70 hover:text-primary transition-colors">
+          <svg class="w-6 h-6"><use href="#icon-account" /></svg>
+        </button>
+        <button aria-label="Cart" class="text-neutral/70 hover:text-primary transition-colors">
+          <svg class="w-4 h-4"><use href="#icon-cart" /></svg>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <!-- Desktop header -->
+  <header class="hidden md:block border-b border-neutral/10">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4 shadow-sm">
+      <div class="flex items-center gap-2 text-neutral/70 hover:text-primary transition-colors">
+        <svg class="w-4 h-4"><use href="#icon-flower" /></svg>
+        <a href="#" class="font-display text-2xl font-bold tracking-wide text-neutral">Atelier de Flora</a>
+      </div>
+      <nav class="flex gap-6 text-sm text-neutral/70">
+        <a href="#">Home</a>
+        <a href="#" class="text-neutral font-semibold border-b-2 border-primary pb-1">Blog</a>
+        <a href="#">Story</a>
+      </nav>
+      <div class="flex items-center gap-4 text-neutral/70">
+        <input type="text" placeholder="Search..." class="text-sm border border-neutral/15 bg-white rounded-full px-3 py-1 w-40">
+        <button aria-label="Account" class="hover:text-primary transition-colors">
+          <svg class="w-6 h-6"><use href="#icon-account" /></svg>
+        </button>
+        <button aria-label="Cart" class="hover:text-primary transition-colors">
+          <svg class="w-4 h-4"><use href="#icon-cart" /></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="px-4 md:px-6 md:max-w-6xl md:mx-auto pt-6 md:pt-10 pb-10 md:pb-14 md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-2">
+        <div class="aspect-[380/148] md:aspect-[678/287] bg-gray-200 rounded-2xl md:rounded-md flex items-center justify-center text-neutral/30 text-3xl md:text-2xl font-light">
+          <span class="md:hidden">380 × 148</span>
+          <span class="hidden md:inline">678 × 287</span>
+        </div>
+        <p class="text-sm md:text-xs text-neutral/50 mt-5 md:mt-3">GUIDE • Oct 12</p>
+        <h1 class="font-display text-[26px] md:text-xl lg:text-2xl leading-[1.25] md:leading-snug font-bold text-neutral mt-2 md:mt-1">
+          Burgdoggen ribeye jowl t-bone, pig swine pork boudin shoulder.
+        </h1>
+        <p class="text-[15px] md:text-sm leading-relaxed md:leading-normal text-neutral/60 mt-4 md:mt-2">
+          Bacon ipsum dolor amet polony drumstick pork loin boudin corned beef chicken pancetta venison. Andouille tenderloin doner jerky.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-8 md:gap-6 mt-10 md:mt-0">
+        <a href="#" class="flex items-start justify-between gap-4 pt-8 border-t border-neutral/10 first:pt-0 first:border-t-0 md:pt-0 md:border-t-0">
+          <div class="flex-1 order-2 md:order-1">
+            <p class="text-sm md:text-[10px] text-neutral/50 tracking-wide">GUIDE • Oct 12</p>
+            <h2 class="font-display text-xl md:text-sm font-bold md:font-medium text-neutral mt-2 md:mt-1 leading-snug">A Tour of Our Sunny Studio Space</h2>
+          </div>
+          <div class="w-[110px] h-[110px] md:w-16 md:h-16 shrink-0 order-1 md:order-2 bg-tertiary rounded-2xl md:rounded flex items-center justify-center text-neutral/30 text-xs md:text-[9px]">160×160</div>
+        </a>
+        <a href="#" class="flex items-start justify-between gap-4 pt-8 border-t border-neutral/10 first:pt-0 first:border-t-0 md:pt-0 md:border-t-0">
+          <div class="flex-1 order-2 md:order-1">
+            <p class="text-sm md:text-[10px] text-neutral/50 tracking-wide">GUIDE • Oct 17</p>
+            <h2 class="font-display text-xl md:text-sm font-bold md:font-medium text-neutral mt-2 md:mt-1 leading-snug">The Art of Preserving Autumn Blooms</h2>
+          </div>
+          <div class="w-[110px] h-[110px] md:w-16 md:h-16 shrink-0 order-1 md:order-2 bg-tertiary rounded-2xl md:rounded flex items-center justify-center text-neutral/30 text-xs md:text-[9px]">160×160</div>
+        </a>
+        <a href="#" class="flex items-start justify-between gap-4 pt-8 border-t border-neutral/10 first:pt-0 first:border-t-0 md:pt-0 md:border-t-0">
+          <div class="flex-1 order-2 md:order-1">
+            <p class="text-sm md:text-[10px] text-neutral/50 tracking-wide">GUIDE • Oct 3</p>
+            <h2 class="font-display text-xl md:text-sm font-bold md:font-medium text-neutral mt-2 md:mt-1 leading-snug">Setting the Table with Winter Greens</h2>
+          </div>
+          <div class="w-[110px] h-[110px] md:w-16 md:h-16 shrink-0 order-1 md:order-2 bg-tertiary rounded-2xl md:rounded flex items-center justify-center text-neutral/30 text-xs md:text-[9px]">160×160</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- POPULAR BLOG -->
+    <section class="px-4 md:px-6 md:max-w-6xl md:mx-auto mb-14">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="font-display text-lg font-bold text-neutral">Popular Blog</h2>
+        <a href="#" class="text-xs text-neutral/50">View all blog</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <article>
+          <div class="aspect-[368/230] bg-tertiary rounded-md flex items-center justify-center text-neutral/30">368×230</div>
+          <p class="text-[10px] text-neutral/50 mt-3">GUIDE • Oct 3</p>
+          <h3 class="text-sm font-medium mt-1 text-neutral">The Art of Preserving Autumn Blooms</h3>
+        </article>
+        <article>
+          <div class="aspect-[368/230] bg-tertiary rounded-md flex items-center justify-center text-neutral/30">368×230</div>
+          <p class="text-[10px] text-neutral/50 mt-3">RECIPE • Oct 12</p>
+          <h3 class="text-sm font-medium mt-1 text-neutral">A Tour of Our Sunny Studio Space</h3>
+        </article>
+        <article>
+          <div class="aspect-[368/230] bg-tertiary rounded-md flex items-center justify-center text-neutral/30">368×230</div>
+          <p class="text-[10px] text-neutral/50 mt-3">INSPIRATION • Oct 17</p>
+          <h3 class="text-sm font-medium mt-1 text-neutral">Setting the Table with Winter Greens</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- ALL BLOG + Pagination -->
+    <section class="px-4 md:px-6 md:max-w-6xl md:mx-auto pb-10">
+      <h2 class="font-display text-lg font-bold text-neutral mb-5">All Blog</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
+        <article>
+          <div class="aspect-[368/230] bg-tertiary rounded-md flex items-center justify-center text-neutral/30">368×230</div>
+          <p class="text-[10px] text-neutral/50 mt-3">GUIDE • Oct 3</p>
+          <h3 class="text-sm font-medium mt-1 text-neutral">The Art of Preserving Autumn Blooms</h3>
+        </article>
+        <article>
+          <div class="aspect-[368/230] bg-tertiary rounded-md flex items-center justify-center text-neutral/30">368×230</div>
+          <p class="text-[10px] text-neutral/50 mt-3">RECIPE • Oct 12</p>
+          <h3 class="text-sm font-medium mt-1 text-neutral">A Tour of Our Sunny Studio Space</h3>
+        </article>
+        <article>
+          <div class="aspect-[368/230] bg-tertiary rounded-md flex items-center justify-center text-neutral/30">368×230</div>
+          <p class="text-[10px] text-neutral/50 mt-3">INSPIRATION • Oct 17</p>
+          <h3 class="text-sm font-medium mt-1 text-neutral">Setting the Table with Winter Greens</h3>
+        </article>
+      </div>
+      <div class="flex items-center justify-center gap-3 text-neutral/40 text-sm">
+        <button>&lt;</button>
+        <span class="w-2 h-2 rounded-full bg-primary"></span>
+        <span class="w-2 h-2 rounded-full bg-neutral/20"></span>
+        <span class="w-2 h-2 rounded-full bg-neutral/20"></span>
+        <button>&gt;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-neutral/10">
+    <div class="px-4 md:px-6 md:max-w-6xl md:mx-auto py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-neutral/60">
+      <p class="text-center sm:text-left">Atelier de Flora<br><span class="text-xs">© 2024 Atelier de Flora</span></p>
+      <div class="flex gap-6">
+        <a href="#">Shipping</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
