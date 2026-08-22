@@ -11,8 +11,25 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #929b91;
+        --color-secondary: #f9f6f0;
+        --color-tertiary: #f3f3f0;
+        --color-neutral: #4a4a4a;
+        --color-background: #fbf9f8;
+        --font-display: "Literata", serif;
+        --font-body: "Plus Jakarta Sans", sans-serif;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .font-display {
+        font-family: "Literata", serif;
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-secondary">
     <div class="min-h-screen w-full flex pl-4 pr-4 pt-12 pb-12 md:pt-24 pb-24">
       <div
         class="flex-1 flex flex-col items-start justify-center bg-slate-300 p-4 rounded-2xl shadow-xl"

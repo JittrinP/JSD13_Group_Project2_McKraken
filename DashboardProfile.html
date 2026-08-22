@@ -4,19 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Profile</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #586158;
+        --color-secondary: #f9f6f0;
+        --color-tertiary: #f3f3f0;
+        --color-neutral: #4a4a4a;
+        --color-background: #fbf9f8;
+        --color-destructive: #8F4748;
+        --font-display: "Literata", serif;
+        --font-body: "Plus Jakarta Sans", sans-serif;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .font-display {
+        font-family: "Literata", serif;
+      }
+    </style>
   </head>
   <body class="min-h-screen flex flex-col">
     <!----------------- Navbar ----------------->
     <nav
-      class="relative z-10 flex flex-row justify-between items-center w-full pl-4 pr-4 pt-2 pb-2 bg-amber-100 shadow-md"
+      class="relative z-10 flex flex-row justify-between items-center w-full pl-4 pr-4 pt-2 pb-2 bg-background shadow-md"
     >
       <div class="leftNav flex flex-row gap-2 justify-center">
         <img
@@ -62,7 +79,7 @@
     </nav>
     <!----------------- Main ----------------->
     <main class="flex-1 flex flex-col">
-      <div class="p-4 bg-olive-200 flex-1">
+      <div class="p-4 bg-tertiary flex-1">
         <div
           class="MyAccountHeader font-[family-name:Literata] text-xl font-bold pb-4"
         >
@@ -73,13 +90,13 @@
         <div class="DashboardContent flex flex-row">
           <!------- Left Menu Content ------->
           <div
-            class="DashBoardMenu hidden md:flex flex-col gap-4 w-1/3 font-[family-name:Plus_Jakarta_Sans] rounded-xl bg-amber-50 justify-center shadow-md"
+            class="DashBoardMenu hidden md:flex flex-col gap-4 w-1/3 font-[family-name:Plus_Jakarta_Sans] rounded-xl bg-background justify-center shadow-md"
           >
             <div
               class="topMenu flex flex-col gap-5 m-4 mb-0 border-b-1 pb-4 border-gray-300"
             >
               <div
-                class="MyAccountMenu flex gap-3 bg-olive-500 text-white rounded-md p-1"
+                class="MyAccountMenu flex gap-3 bg-primary text-white rounded-md p-1"
               >
                 <img
                   class="MyAccountlogo"
@@ -121,7 +138,7 @@
                 <h2>Favorite</h2>
               </div>
             </div>
-            <div class="BottomMenu flex flex-col gap-3 m-4 mt-0">
+            <div class="BottomMenu flex flex-col gap-5 m-4 mt-0">
               <div class="SettingMenu flex gap-3">
                 <img
                   class="SettingLogo"
@@ -143,7 +160,7 @@
 
           <!------- Right Content ------->
           <div
-            class="MyAccountContent font-[family-name:Literata] w-full md:ml-8 md:mr-8 p-8 bg-amber-50 rounded-2xl shadow-md"
+            class="MyAccountContent font-[family-name:Literata] w-full md:ml-8 md:mr-8 p-8 bg-background rounded-2xl shadow-md"
           >
             <div class="Head flex flex-col justify-center items-center pb-2 md:flex-row md:justify-start">
               <img
@@ -155,8 +172,8 @@
               </div>
             </div>
             <div>
-              <div class="">
-                <div class="Name grid md:grid-cols-2 md:gap-8">
+              <div class="flex flex-col gap-3">
+                <div class="Name grid gap-3 md:grid-cols-2 md:gap-12">
                   <div>
                     <label class="">First Name</label>
                     <input class="w-full bg-gray-200 rounded-md" />
@@ -166,7 +183,7 @@
                     <input class="w-full bg-gray-200 rounded-md" />
                   </div>
                 </div>
-                <div class="Address grid md:grid-cols-2 md:gap-8">
+                <div class="Address grid gap-3 md:grid-cols-2 md:gap-12">
                   <div>
                     <label class="">Address</label>
                     <input class="w-full bg-gray-200 rounded-md" />
@@ -177,8 +194,8 @@
                   </div>
                 </div>
 
-                <div class="grid md:grid-cols-2 md:gap-8">
-                  <div class="grid grid-cols-3 w-full gap-2">
+                <div class="grid gap-3 md:grid-cols-2 md:gap-12">
+                  <div class="grid grid-cols-3 w-full gap-8">
                     <div class="col-span-2">
                       <label>Date of Birth</label>
                       <input class="w-full bg-gray-200 rounded-md" />
@@ -194,44 +211,46 @@
                   </div>
                 </div>
 
-                <div class="grid md:grid-cols-2 md:gap-8">
+                <div class="grid md:grid-cols-2 gap-3 md:gap-12">
                   <div>
                     <label class="">E-mail</label>
                     <input class="w-full bg-gray-200 rounded-md" />
                   </div>
                   <div class="hidden md:flex justify-end gap-4">
+                     <!-- button for desktop responsive  -->
                     <button
-                      class="bg-green-400 text-white rounded-full mt-2 mb-2 pl-2 pr-2 hover:cursor-pointer"
+                      class="bg-primary text-white rounded-full mt-2 mb-2 pl-3 pr-3 hover:cursor-pointer"
                     >
                       Confirm
                     </button>
                     <button
-                      class="bg-red-400 text-white rounded-full mt-2 mb-2 pl-2 pr-2 hover:cursor-pointer"
+                      class="bg-destructive text-white rounded-full mt-2 mb-2 pl-3 pr-3 hover:cursor-pointer"
                     >
                       Delete
                     </button>
                   </div>
                 </div>
-                <div class="grid md:grid-cols-2 md:gap-8">
+                <div class="grid md:grid-cols-2 md:gap-12">
                   <div>
                     <label class="">Password</label>
                     <input class="w-full bg-gray-200 rounded-md" />
                   </div>
                 </div>
-                <div class="grid md:grid-cols-2 md:gap-8">
+                <div class="grid md:grid-cols-2 md:gap-12">
                   <div>
                     <label class="">Re-Enter Password</label>
                     <input class="w-full bg-gray-200 rounded-md" />
                   </div>
                 </div>
+                <!-- button for mobile responsive  -->
                 <div class="flex md:hidden justify-end gap-4">
                   <button
-                    class="bg-green-400 text-white rounded-full mt-2 mb-2 pl-2 pr-2 hover:cursor-pointer"
+                    class="bg-primary text-white rounded-full mt-2 mb-2 p-2 hover:cursor-pointer"
                   >
                     Confirm
                   </button>
                   <button
-                    class="bg-red-400 text-white rounded-full mt-2 mb-2 pl-2 pr-2 hover:cursor-pointer"
+                    class="bg-destructive text-white rounded-full mt-2 mb-2 p-2 hover:cursor-pointer"
                   >
                     Delete
                   </button>
