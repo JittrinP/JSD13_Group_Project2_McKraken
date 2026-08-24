@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#586158',
+          neutral: '#4A4A4A',
+          surface: '#FBF9F8',
+          tertiary: '#F3F3F0',
+          secondary: '#F9F6F0',
+          line: '#EFEDED',
+          muted: '#C4C7C1',
+        },
+        fontFamily: {
+          display: ['Literata', 'serif'],
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+</head>
+<body class="bg-tertiary font-sans text-neutral antialiased">
+
+<main class="mx-auto flex w-full max-w-[1280px] flex-col gap-12 px-4 py-6 md:gap-20 md:px-0 md:py-12">
+
+  <!-- ===== Section: Hero / Custom Product Builder ===== -->
+  <section class="grid grid-cols-1 gap-6 rounded-xl border border-line bg-surface p-6 shadow-[0px_4px_10px_rgba(0,0,0,0.04)] md:grid-cols-2 md:grid-rows-[auto_1fr] md:items-center md:gap-12 md:rounded-3xl md:p-12">
+
+    <!-- Heading (mobile: above preview / desktop: right column, row 1) -->
+    <div class="md:col-start-2 md:row-start-1">
+      <h1 class="font-display text-[28px] leading-9 text-primary md:text-5xl md:leading-[56px] md:tracking-[-0.96px]">
+        Design Your Perfect Arrangement
+      </h1>
+      <p class="mt-6 hidden text-lg leading-7 text-neutral md:block">
+        Select your favorite stems, choose a vessel, and add a personal touch to create a bespoke gift.
+      </p>
+    </div>
+
+    <!-- 3D Preview -->
+    <div class="relative flex min-h-[256px] items-center justify-center overflow-hidden rounded-lg border border-line bg-tertiary md:col-start-1 md:row-span-2 md:row-start-1 md:min-h-[500px] md:self-stretch md:rounded-2xl">
+      <img src="./images/icon-rotate.svg"
+           alt="" aria-hidden="true"
+           class="absolute h-[63.333px] w-[63.333px]">
+      <img src="./images/flower-port.png"
+           alt="Preview of the custom flower arrangement"
+           class="relative h-full w-full object-contain opacity-80 mix-blend-multiply">
+      <!-- Desktop only -->
+      <div class="absolute bottom-4 right-4 hidden items-center gap-2 rounded-full border border-primary/30 bg-surface/90 px-4 py-2 shadow-[0px_1px_2px_rgba(0,0,0,0.05)] backdrop-blur-[2px] md:flex">
+        <img src="./images/icon-six-dot.svg"
+             alt="" aria-hidden="true" class="h-[8.885px] w-[5.385px]">
+        <span class="text-xs font-medium leading-4 text-neutral">Drag to rotate</span>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="flex flex-col gap-6 md:col-start-2 md:row-start-2">
+      <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-2">
+          <span class="text-sm font-semibold leading-5 tracking-[0.7px] text-neutral">Flower</span>
+          <button type="button" class="flex w-full items-center justify-between rounded-lg border border-primary/20 bg-tertiary px-4 py-3 text-left">
+            <span class="text-base leading-6 text-neutral">Peonies (Soft Pink)</span>
+            <img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" class="h-6 w-6">
+          </button>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span class="text-sm font-semibold leading-5 tracking-[0.7px] text-neutral">Bouquet</span>
+          <button type="button" class="flex w-full items-center justify-between rounded-lg border border-primary/20 bg-tertiary px-4 py-3 text-left">
+            <span class="text-base leading-6 text-neutral">Ceramic Jug (Cream)</span>
+            <img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" class="h-6 w-6">
+          </button>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span class="text-sm font-semibold leading-5 tracking-[0.7px] text-neutral">Accents &amp; Foliage</span>
+          <button type="button" class="flex w-full items-center justify-between rounded-lg border border-primary/20 bg-tertiary px-4 py-3 text-left">
+            <span class="text-base leading-6 text-neutral">Eucalyptus Leaves</span>
+            <img src="./images/icon-arrow-down.svg" alt="" aria-hidden="true" class="h-6 w-6">
+          </button>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between gap-5 pt-4 md:justify-start">
+        <button type="button" class="rounded-full bg-primary px-7 py-3 text-sm font-semibold leading-5 tracking-[0.7px] text-surface shadow-[0px_1px_1px_rgba(0,0,0,0.05)] md:px-8 md:py-4">
+          Add to Cart
+        </button>
+        <button type="button" class="rounded-full border border-primary px-7 py-3 text-sm font-semibold leading-5 tracking-[0.7px] text-primary shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:px-8 md:py-4">
+          Save
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section: Curated Collections ===== -->
+  <section class="flex flex-col gap-6">
+    <div class="flex items-center justify-between md:pb-4">
+      <h2 class="font-display text-[28px] leading-9 text-primary md:text-[32px] md:leading-10">Curated Collections</h2>
+      <!-- Desktop only -->
+      <a href="#" class="hidden text-sm font-semibold leading-5 tracking-[0.7px] text-primary md:block">View all collections</a>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-[52px]">
+
+      <article class="overflow-hidden rounded-xl border border-muted/30 bg-secondary shadow-[0px_10px_30px_rgba(146,155,145,0.1)] md:border-0">
+        <div class="relative h-48 p-0 md:h-60 md:p-4">
+          <img src="https://placehold.co/309x208/png"
+               alt="Sunny Day Potted arrangement" class="h-full w-full object-cover md:rounded-lg md:border md:border-muted/20">
+          <span class="absolute right-2 top-2 rounded-full bg-secondary px-3 py-1 text-xs font-semibold leading-4 text-primary shadow-[0px_1px_1px_rgba(0,0,0,0.05)] md:bottom-6 md:right-6 md:top-auto md:border md:border-primary/30 md:px-3 md:py-2 md:text-sm md:leading-5">$32.00</span>
+        </div>
+        <div class="flex flex-col p-6">
+          <h3 class="pb-2 font-display text-xl leading-7 text-primary md:text-2xl md:leading-8">Sunny Day Potted</h3>
+          <p class="pb-6 text-base leading-6 text-neutral">Brighten any room with this cheerful little friend.</p>
+          <div class="flex items-center justify-between gap-4">
+            <!-- Mobile only -->
+            <div class="flex items-center rounded-lg border border-muted/30 bg-tertiary md:hidden">
+              <button type="button" aria-label="Decrease quantity" class="flex items-center justify-center px-2 py-3">
+                <img src="./images/icon-minusline-mobile.svg" alt="" aria-hidden="true" class="h-[1.167px] w-[8.167px]">
+              </button>
+              <span class="w-8 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-neutral">1</span>
+              <button type="button" aria-label="Increase quantity" class="flex items-center justify-center px-2 py-3">
+                <img src="./images/icon-plusline-mobile.svg" alt="" aria-hidden="true" class="h-[8.167px] w-[8.167px]">
+              </button>
+            </div>
+            <button type="button" class="rounded-full bg-primary px-6 py-2 text-sm font-semibold leading-5 tracking-[0.7px] text-surface md:w-full md:py-3">Order Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="overflow-hidden rounded-xl border border-muted/30 bg-secondary shadow-[0px_10px_30px_rgba(146,155,145,0.1)] md:border-0">
+        <div class="relative h-48 p-0 md:h-60 md:p-4">
+          <img src="https://placehold.co/309x208/png"
+               alt="Sunny Day Potted arrangement" class="h-full w-full object-cover md:rounded-lg md:border md:border-muted/20">
+          <span class="absolute right-2 top-2 rounded-full bg-secondary px-3 py-1 text-xs font-semibold leading-4 text-primary shadow-[0px_1px_1px_rgba(0,0,0,0.05)] md:bottom-6 md:right-6 md:top-auto md:border md:border-primary/30 md:px-3 md:py-2 md:text-sm md:leading-5">$32.00</span>
+        </div>
+        <div class="flex flex-col p-6">
+          <h3 class="pb-2 font-display text-xl leading-7 text-primary md:text-2xl md:leading-8">Sunny Day Potted</h3>
+          <p class="pb-6 text-base leading-6 text-neutral">Brighten any room with this cheerful little friend.</p>
+          <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center rounded-lg border border-muted/30 bg-tertiary md:hidden">
+              <button type="button" aria-label="Decrease quantity" class="flex items-center justify-center px-2 py-3">
+                <img src="./images/icon-minusline-mobile.svg" alt="" aria-hidden="true" class="h-[1.167px] w-[8.167px]">
+              </button>
+              <span class="w-8 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-neutral">1</span>
+              <button type="button" aria-label="Increase quantity" class="flex items-center justify-center px-2 py-3">
+                <img src="./images/icon-plusline-mobile.svg" alt="" aria-hidden="true" class="h-[8.167px] w-[8.167px]">
+              </button>
+            </div>
+            <button type="button" class="rounded-full bg-primary px-6 py-2 text-sm font-semibold leading-5 tracking-[0.7px] text-surface md:w-full md:py-3">Order Now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="overflow-hidden rounded-xl border border-muted/30 bg-secondary shadow-[0px_10px_30px_rgba(146,155,145,0.1)] md:border-0">
+        <div class="relative h-48 p-0 md:h-60 md:p-4">
+          <img src="https://placehold.co/309x208/png"
+               alt="Sunny Day Potted arrangement" class="h-full w-full object-cover md:rounded-lg md:border md:border-muted/20">
+          <span class="absolute right-2 top-2 rounded-full bg-secondary px-3 py-1 text-xs font-semibold leading-4 text-primary shadow-[0px_1px_1px_rgba(0,0,0,0.05)] md:bottom-6 md:right-6 md:top-auto md:border md:border-primary/30 md:px-3 md:py-2 md:text-sm md:leading-5">$32.00</span>
+        </div>
+        <div class="flex flex-col p-6">
+          <h3 class="pb-2 font-display text-xl leading-7 text-primary md:text-2xl md:leading-8">Sunny Day Potted</h3>
+          <p class="pb-6 text-base leading-6 text-neutral">Brighten any room with this cheerful little friend.</p>
+          <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center rounded-lg border border-muted/30 bg-tertiary md:hidden">
+              <button type="button" aria-label="Decrease quantity" class="flex items-center justify-center px-2 py-3">
+                <img src="./images/icon-minusline-mobile.svg" alt="" aria-hidden="true" class="h-[1.167px] w-[8.167px]">
+              </button>
+              <span class="w-8 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-neutral">1</span>
+              <button type="button" aria-label="Increase quantity" class="flex items-center justify-center px-2 py-3">
+                <img src="./images/icon-plusline-mobile.svg" alt="" aria-hidden="true" class="h-[8.167px] w-[8.167px]">
+              </button>
+            </div>
+            <button type="button" class="rounded-full bg-primary px-6 py-2 text-sm font-semibold leading-5 tracking-[0.7px] text-surface md:w-full md:py-3">Order Now</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== Section: Shop Blog ===== -->
+  <section class="flex flex-col gap-6">
+    <div class="flex items-center justify-between">
+      <h2 class="font-display text-[28px] leading-9 text-primary md:pb-4 md:text-[32px] md:leading-10">Shop Blog</h2>
+      <!-- Desktop only -->
+      <a href="#" class="hidden text-sm font-semibold leading-5 tracking-[0.7px] text-primary md:block">View all blog</a>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-[52px]">
+
+      <article class="overflow-hidden rounded-xl border border-muted/30 bg-surface shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:flex md:flex-col md:gap-3 md:rounded-none md:border-0 md:bg-transparent md:shadow-none">
+        <div class="overflow-hidden bg-line md:rounded-2xl">
+          <img src="https://placehold.co/368x230/png"
+               alt="Dried flowers guide" class="h-40 w-full object-cover md:h-[230px]">
+        </div>
+        <div class="flex flex-col gap-2 p-6 md:p-0">
+          <!-- Desktop only -->
+          <div class="hidden items-center gap-2 pt-2 md:flex">
+            <span class="text-xs uppercase leading-4 tracking-[0.6px] text-primary">Guide</span>
+            <span class="h-1 w-1 rounded-full bg-primary"></span>
+            <span class="text-xs leading-4 text-neutral">Oct 12</span>
+          </div>
+          <h3 class="font-display text-xl leading-7 text-neutral md:text-primary">The Art of Preserving Autumn Blooms</h3>
+          <!-- Mobile only -->
+          <p class="text-base leading-6 text-neutral md:hidden">
+            Discover the therapeutic process of arranging locally sourced blooms and embracing natural imperfections in our latest journal entry.
+          </p>
+        </div>
+      </article>
+
+      <article class="overflow-hidden rounded-xl border border-muted/30 bg-surface shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:flex md:flex-col md:gap-3 md:rounded-none md:border-0 md:bg-transparent md:shadow-none">
+        <div class="overflow-hidden bg-line md:rounded-2xl">
+          <img src="https://placehold.co/368x230/png"
+               alt="Dried flowers guide" class="h-40 w-full object-cover md:h-[230px]">
+        </div>
+        <div class="flex flex-col gap-2 p-6 md:p-0">
+          <div class="hidden items-center gap-2 pt-2 md:flex">
+            <span class="text-xs uppercase leading-4 tracking-[0.6px] text-primary">Guide</span>
+            <span class="h-1 w-1 rounded-full bg-primary"></span>
+            <span class="text-xs leading-4 text-neutral">Oct 12</span>
+          </div>
+          <h3 class="font-display text-xl leading-7 text-neutral md:text-primary">The Art of Preserving Autumn Blooms</h3>
+          <p class="text-base leading-6 text-neutral md:hidden">
+            Discover the therapeutic process of arranging locally sourced blooms and embracing natural imperfections in our latest journal entry.
+          </p>
+        </div>
+      </article>
+
+      <article class="overflow-hidden rounded-xl border border-muted/30 bg-surface shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:flex md:flex-col md:gap-3 md:rounded-none md:border-0 md:bg-transparent md:shadow-none">
+        <div class="overflow-hidden bg-line md:rounded-2xl">
+          <img src="https://placehold.co/368x230/png"
+               alt="Dried flowers guide" class="h-40 w-full object-cover md:h-[230px]">
+        </div>
+        <div class="flex flex-col gap-2 p-6 md:p-0">
+          <div class="hidden items-center gap-2 pt-2 md:flex">
+            <span class="text-xs uppercase leading-4 tracking-[0.6px] text-primary">Guide</span>
+            <span class="h-1 w-1 rounded-full bg-primary"></span>
+            <span class="text-xs leading-4 text-neutral">Oct 12</span>
+          </div>
+          <h3 class="font-display text-xl leading-7 text-neutral md:text-primary">The Art of Preserving Autumn Blooms</h3>
+          <p class="text-base leading-6 text-neutral md:hidden">
+            Discover the therapeutic process of arranging locally sourced blooms and embracing natural imperfections in our latest journal entry.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== Section: Flower Care Guide ===== -->
+  <section class="flex flex-col overflow-hidden rounded-xl border border-muted/30 bg-surface shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:flex-row md:items-center md:justify-between md:rounded-3xl md:border-line">
+    <!-- Image: top on mobile, right on desktop -->
+    <div class="md:order-2 md:min-h-[300px] md:w-[590px] md:self-stretch">
+      <img src="https://placehold.co/396x160/png"
+           alt="Trimming flower stems" class="h-40 w-full object-cover md:hidden">
+      <img src="https://placehold.co/590x566/png"
+           alt="Trimming flower stems" class="hidden h-40 w-full object-cover md:block md:h-full md:object-contain">
+    </div>
+
+    <div class="flex flex-col gap-3 p-6 md:order-1 md:w-[690px] md:gap-6 md:p-12">
+      <!-- Desktop only -->
+      <div class="hidden items-center gap-2 pb-2 md:flex">
+        <img src="./images/icon-water-drop.svg" alt="" aria-hidden="true" class="h-[18.846px] w-[15px]">
+        <span class="text-sm font-semibold uppercase leading-5 tracking-[0.7px] text-primary">Care Instructions</span>
+      </div>
+
+      <h2 class="text-center font-display text-xl leading-7 text-neutral md:text-left md:text-5xl md:leading-[56px] md:tracking-[-0.96px] md:text-primary">
+        Keep Them Blooming
+      </h2>
+
+      <p class="text-center text-base leading-6 text-neutral md:pb-4 md:text-left md:text-lg md:leading-7">
+        Our floral arrangements are designed to last. Follow these simple steps to ensure your blooms stay vibrant and fresh for as long as possible.
+      </p>
+
+      <!-- Desktop only -->
+      <ul class="hidden flex-col gap-4 md:flex">
+        <li class="flex gap-3">
+          <img src="./images/icon-scissors.svg" alt="" aria-hidden="true" class="h-[23.308px] w-[19.231px] shrink-0">
+          <div class="flex flex-col gap-0.5">
+            <strong class="text-base font-bold leading-6 text-primary">Trim the Stems</strong>
+            <span class="text-sm leading-5 text-neutral">Cut 1 inch off the bottom at a 45-degree angle before placing in water.</span>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <img src="./images/icon-water-drop-half.svg" alt="" aria-hidden="true" class="h-[21.808px] w-[15px] shrink-0">
+          <div class="flex flex-col gap-0.5">
+            <strong class="text-base font-bold leading-6 text-primary">Fresh Water Daily</strong>
+            <span class="text-sm leading-5 text-neutral">Change the water every 2 days and clean the vase to prevent bacteria.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="flex justify-center md:justify-start md:pt-4">
+        <button type="button" class="rounded-full border-2 border-primary px-6 py-2.5 text-sm font-semibold leading-5 tracking-[0.7px] text-primary shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:px-8 md:py-4">
+          Read Full Guide
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section: Customer Reviews ===== -->
+  <section class="flex flex-col gap-3 md:gap-6 md:py-4">
+    <!-- Desktop only -->
+    <h2 class="hidden text-center font-display text-[32px] leading-10 text-primary md:block md:pb-6">Notes from our Friends</h2>
+
+    <div class="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-6">
+
+      <article class="relative flex flex-col gap-2 rounded-xl border border-muted/20 bg-secondary p-6 shadow-[0px_1px_1px_rgba(0,0,0,0.05)] md:gap-4 md:rounded-2xl md:border-line md:p-8">
+        <div class="flex items-center gap-2 md:gap-1">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+        </div>
+        <!-- Desktop only -->
+        <img src="./images/icon-99.svg" alt="" aria-hidden="true"
+             class="absolute right-6 top-6 hidden h-[16.961px] w-[24.288px] md:block">
+        <p class="text-base italic leading-6 text-neutral">
+          "The custom bouquet I ordered for my mother's birthday was absolutely breathtaking. The care put into the packaging and the quality of the blooms exceeded all expectations."
+        </p>
+        <!-- Mobile only -->
+        <p class="text-xs font-medium leading-4 text-neutral md:hidden">- Sarah Jenkins</p>
+        <!-- Desktop only -->
+        <div class="hidden items-center gap-3 pt-4 md:flex md:mt-auto">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-line font-display text-base leading-6 text-primary">S</span>
+          <div class="flex flex-col">
+            <span class="text-base leading-6 text-primary">Sarah Jenkins</span>
+            <span class="text-xs leading-4 text-neutral">Custom Arrangement</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="relative flex flex-col gap-2 rounded-xl border border-muted/20 bg-secondary p-6 shadow-[0px_1px_1px_rgba(0,0,0,0.05)] md:gap-4 md:rounded-2xl md:border-line md:p-8">
+        <div class="flex items-center gap-2 md:gap-1">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+        </div>
+        <img src="./images/icon-99.svg" alt="" aria-hidden="true"
+             class="absolute right-6 top-6 hidden h-[16.961px] w-[24.288px] md:block">
+        <p class="text-base italic leading-6 text-neutral">
+          "I love the weekly flower subscription! Every Friday, a new seasonal bundle arrives, and it instantly brightens up my studio. Highly recommend for a little self-care."
+        </p>
+        <p class="text-xs font-medium leading-4 text-neutral md:hidden">- Marcus T.</p>
+        <div class="hidden items-center gap-3 pt-4 md:flex md:mt-auto">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-line font-display text-base leading-6 text-primary">M</span>
+          <div class="flex flex-col">
+            <span class="text-base leading-6 text-primary">Marcus T.</span>
+            <span class="text-xs leading-4 text-neutral">Weekly Subscription</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="relative flex flex-col gap-2 rounded-xl border border-muted/20 bg-secondary p-6 shadow-[0px_1px_1px_rgba(0,0,0,0.05)] md:gap-4 md:rounded-2xl md:border-line md:p-8">
+        <div class="flex items-center gap-2 md:gap-1">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+          <img src="./images/icon-star-half.svg" alt="" aria-hidden="true" class="h-[11.083px] w-[11.667px] md:h-[19px] md:w-5">
+        </div>
+        <img src="./images/icon-99.svg" alt="" aria-hidden="true"
+             class="absolute right-6 top-6 hidden h-[16.961px] w-[24.288px] md:block">
+        <p class="text-base italic leading-6 text-neutral">
+          "The flower care guide included with the delivery was a nice touch. It's been two weeks and my dried arrangement still looks as perfect as day one."
+        </p>
+        <p class="text-xs font-medium leading-4 text-neutral md:hidden">- Elena R.</p>
+        <div class="hidden items-center gap-3 pt-4 md:flex md:mt-auto">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full bg-line font-display text-base leading-6 text-primary">E</span>
+          <div class="flex flex-col">
+            <span class="text-base leading-6 text-primary">Elena R.</span>
+            <span class="text-xs leading-4 text-neutral">Dried Collection</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== Section: Rooted in Nature / Shop Detail ===== -->
+  <section class="flex flex-col items-center gap-4 rounded-xl border border-muted/30 bg-surface p-6 shadow-[0px_1px_1px_rgba(0,0,0,0.05)] md:flex-row md:items-center md:justify-between md:gap-12 md:rounded-3xl md:border-line md:p-12">
+    <div class="flex w-full flex-col gap-4 md:w-[654px]">
+      <!-- Mobile only -->
+      <h2 class="text-center font-display text-xl leading-7 text-primary md:hidden">
+        Visit Our Studio
+      </h2>
+      <!-- Desktop only -->
+      <h2 class="hidden text-left font-display text-5xl leading-[56px] tracking-[-0.96px] text-primary md:block">
+        Rooted in Nature
+      </h2>
+
+      <!-- Desktop only -->
+      <p class="hidden max-w-[576px] text-base leading-6 text-neutral md:block">
+        Atelier de Flora began as a small botanical journal, cataloging the subtle beauty of changing seasons. Today, our studio is dedicated to translating that natural warmth into handcrafted arrangements that celebrate life's quiet, meaningful moments.
+      </p>
+
+      <!-- Mobile only -->
+      <div class="flex flex-col items-center gap-1 text-center md:hidden">
+        <p class="text-sm leading-5 text-neutral">123/111 Bangkok Thailand</p>
+        <p class="text-sm leading-5 text-neutral">Open Tues - Sun, 10am - 6pm</p>
+      </div>
+
+      <!-- Desktop only -->
+      <div class="hidden gap-6 pt-2 text-center md:grid md:max-w-[448px] md:grid-cols-2 md:pt-6 md:text-left">
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center justify-center gap-2 pb-1 md:justify-start">
+            <img src="./images/icon-address2.svg" alt="" aria-hidden="true" class="h-[19.01px] w-[15.096px]">
+            <span class="text-base leading-6 text-primary">Visit Us</span>
+          </div>
+          <p class="text-sm leading-5 text-neutral">123/111 Bangkok Thailand</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center justify-center gap-2 pb-1 md:justify-start">
+            <img src="./images/icon-clocks.svg" alt="" aria-hidden="true" class="h-[19px] w-[19px]">
+            <span class="text-base leading-6 text-primary">Hours</span>
+          </div>
+          <p class="text-sm leading-5 text-neutral">Tue - Sat: 10am - 6pm<br>Sun - Mon: Closed</p>
+        </div>
+      </div>
+
+      <!-- Mobile only -->
+      <div class="flex justify-center pt-2 md:hidden">
+        <button type="button" class="rounded-lg border-2 border-primary px-6 py-2.5 text-sm font-semibold leading-5 tracking-[0.7px] text-primary">
+          Get Directions
+        </button>
+      </div>
+    </div>
+
+    <!-- Desktop only -->
+    <div class="hidden h-[350px] w-[350px] shrink-0 overflow-hidden rounded-full shadow-[0px_10px_7.5px_rgba(0,0,0,0.1)] md:block">
+      <img src="https://placehold.co/350x350/png"
+           alt="Atelier de Flora storefront" class="h-full w-full object-cover">
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
