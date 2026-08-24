@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check out</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body class="bg-[#f3f3f0] font-['Plus_Jakarta_Sans'] antialiased">
+
+  <main class="flex flex-col gap-2.5 p-2.5 md:gap-4 md:p-0">
+
+    <!-- ============ SUMMARY ============ -->
+    <section class="flex flex-col gap-5 p-2.5 md:gap-2.5 md:p-4">
+      <h1 class="font-['Literata'] text-[32px] font-bold capitalize text-[#586158] md:px-5">Summary</h1>
+
+      <div class="flex flex-col gap-5 md:gap-7 md:bg-[#f9f6f0] md:p-5">
+
+        <!-- กลุ่มสินค้า -->
+        <div class="flex flex-col gap-2.5 bg-[#f9f6f0] p-1 md:gap-4 md:bg-transparent md:p-0">
+
+          <!-- header row: desktop only -->
+          <div class="hidden items-center justify-between bg-[#fbf9f8] px-6 py-2.5 shadow-[0px_10px_30px_0px_rgba(0,0,0,0.1)] md:flex">
+            <span class="w-[161px] p-2.5 text-center font-['Literata'] text-2xl leading-8 text-[#586158]">Product</span>
+            <div class="flex w-[357px] items-center justify-between px-2.5">
+              <span class="w-[157px] p-2.5 text-center font-['Literata'] text-2xl leading-8 text-[#586158]">Quantity</span>
+              <span class="w-[139px] whitespace-nowrap p-2.5 font-['Literata'] text-2xl leading-8 text-[#586158]">Total Price</span>
+            </div>
+          </div>
+
+          <!-- สินค้า 1 -->
+          <article class="flex items-center gap-2.5 bg-[#fbf9f8] p-2.5 md:px-6 md:py-4 md:shadow-[0px_0px_30px_0px_rgba(0,0,0,0.1)]">
+            <img src="https://placehold.co/160x160/png" alt="Sunny Day Potted"
+              class="h-[140px] w-[140px] shrink-0 object-cover md:h-40 md:w-40" />
+            <div class="flex flex-col justify-center gap-2.5 md:contents">
+              <p class="p-2.5 font-['Literata'] text-2xl leading-8 text-[#586158] md:w-[300px]">Sunny Day Potted</p>
+              <div class="flex items-center justify-between px-2.5 md:ml-auto md:w-[357px]">
+                <span class="p-2.5 text-center font-['Literata'] text-xl leading-8 text-[#586158] md:w-[157px] md:text-2xl"><span class="md:hidden">Qty : </span>5</span>
+                <span class="p-2.5 font-['Literata'] text-xl leading-8 text-[#586158] md:w-[139px] md:text-2xl">$ 150.00</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- สินค้า 2 -->
+          <article class="flex items-center gap-2.5 bg-[#fbf9f8] p-2.5 md:px-6 md:py-4 md:shadow-[0px_0px_30px_0px_rgba(0,0,0,0.1)]">
+            <img src="https://placehold.co/160x160/png" alt="Sunny Day Potted"
+              class="h-[140px] w-[140px] shrink-0 object-cover md:h-40 md:w-40" />
+            <div class="flex flex-col justify-center gap-2.5 md:contents">
+              <p class="p-2.5 font-['Literata'] text-2xl leading-8 text-[#586158] md:w-[300px]">Sunny Day Potted</p>
+              <div class="flex items-center justify-between px-2.5 md:ml-auto md:w-[357px]">
+                <span class="p-2.5 text-center font-['Literata'] text-xl leading-8 text-[#586158] md:w-[157px] md:text-2xl"><span class="md:hidden">Qty : </span>5</span>
+                <span class="p-2.5 font-['Literata'] text-xl leading-8 text-[#586158] md:w-[139px] md:text-2xl">$ 150.00</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ค่าธรรมเนียม -->
+        <div class="flex flex-col gap-2.5 bg-[#fbf9f8] p-1 md:gap-1 md:px-6 md:py-2.5 md:shadow-[0px_10px_30px_0px_rgba(0,0,0,0.1)]">
+          <div class="flex items-center justify-between p-2.5 md:p-0">
+            <span class="w-[157px] p-2.5 font-['Literata'] text-2xl leading-8 text-[#586158] md:w-[161px] md:text-center">Service fee</span>
+            <div class="flex items-center md:w-[357px] md:justify-between md:px-2.5">
+              <span class="hidden w-[157px] p-2.5 text-center font-['Literata'] text-2xl leading-8 text-[#586158] md:block">-</span>
+              <span class="w-[139px] p-2.5 text-center font-['Literata'] text-2xl leading-8 text-[#586158] md:text-left">$ 0.00</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between p-2.5 md:p-0">
+            <span class="w-[157px] p-2.5 font-['Literata'] text-2xl leading-8 text-[#586158] md:w-[161px] md:text-center">Delivery fee</span>
+            <div class="flex items-center md:w-[357px] md:justify-between md:px-2.5">
+              <span class="hidden w-[157px] p-2.5 text-center font-['Literata'] text-2xl leading-8 text-[#586158] md:block">-</span>
+              <span class="w-[139px] p-2.5 text-center font-['Literata'] text-2xl leading-8 text-[#586158] md:text-left">$ 10.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ยอดรวม -->
+        <div class="flex items-center justify-between bg-[#fbf9f8] p-2.5 md:px-6 md:shadow-[0px_10px_30px_0px_rgba(0,0,0,0.1)]">
+          <span class="w-[157px] p-2.5 font-['Literata'] text-2xl leading-8 text-[#586158] md:w-[161px] md:text-center">Grand Total</span>
+          <div class="flex items-center md:w-[357px] md:justify-between md:px-2.5">
+            <span class="hidden w-[157px] p-2.5 text-center font-['Literata'] text-2xl leading-8 text-[#586158] md:block">10</span>
+            <span class="w-[139px] p-2.5 text-center font-['Literata'] text-2xl leading-8 text-[#586158] md:text-left">$ 310.00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DELIVERY ADDRESS ============ -->
+    <section class="flex flex-col gap-2.5 p-1 md:p-4">
+      <h2 class="font-['Literata'] text-[32px] font-bold capitalize text-[#586158]">Delivery&nbsp; Address</h2>
+      <div class="flex flex-col items-center gap-5 bg-[#fbf9f8] p-4 md:items-start md:px-4 md:py-7">
+        <p class="text-center text-2xl font-medium capitalize leading-normal text-[#4a4a4a] md:text-left">
+          123 Market Street, Suite 400 <br class="md:hidden" />San Francisco, CA 94105 <br class="md:hidden" />United States
+        </p>
+        <p class="text-center text-2xl font-medium capitalize leading-normal text-[#4a4a4a] md:text-left">Phone: +1 (415) 555-0199</p>
+      </div>
+    </section>
+
+    <!-- ============ PAYMENT METHOD ============ -->
+    <section class="flex flex-col bg-[#fbf9f8] p-1 md:flex-row md:items-center md:justify-between md:py-2.5 md:pl-2.5 md:pr-12">
+      <div class="flex flex-col gap-9 p-2.5">
+        <h2 class="font-['Literata'] text-[32px] font-bold capitalize text-[#586158]">Payment Method</h2>
+
+        <div class="grid grid-cols-3 justify-items-start gap-x-2.5 gap-y-4 p-2.5 md:flex md:w-[834px] md:items-center md:justify-between md:gap-0">
+          <img src="/images/payment-qrcode.svg" alt="QR payment" class="h-[70px] w-[70px]" />
+          <img src="/images/payment-alipay.svg" alt="Alipay" class="h-[70px] w-[70px]" />
+          <img src="/images/payment-jcb.svg" alt="JCB" class="h-[70px] w-[90px]" />
+          <img src="/images/payment-mastercard.svg" alt="Mastercard" class="h-[70px] w-[90px]" />
+          <img src="/images/payment-visa.svg" alt="Visa" class="h-[70px] w-[70px]" />
+          <img src="/images/payment-unionpay.svg" alt="UnionPay" class="h-[70px] w-28" />
+        </div>
+      </div>
+
+      <div class="flex justify-center gap-6 px-12 py-2.5 md:flex-col md:gap-7 md:py-5">
+        <button type="button" class="h-11 w-[134px] rounded-full bg-[#586158] text-sm font-semibold leading-5 tracking-[0.7px] text-[#fbf9f8]">Confirm Order</button>
+        <button type="button" class="h-11 w-[134px] rounded-full bg-[#586158] text-sm font-semibold leading-5 tracking-[0.7px] text-[#fbf9f8]">Cancel</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
