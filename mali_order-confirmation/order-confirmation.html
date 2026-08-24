@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #586158;
+        --color-secondary: #f9f6f0;
+        --color-tertiary: #f3f3f0;
+        --color-neutral: #4a4a4a;
+        --font-display: "Literata", serif;
+        --font-body: "Plus Jakarta Sans", sans-serif;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .font-display {
+        font-family: "Literata", serif;
+      }
+    </style>
+  </head>
+  <body class="bg-tertiary/50 items-center justify-center min-h-screen mx-2 my-2 text-neutral/90 md:flex md:flex-col">
+    <main class="py-10 md:w-[520px]">
+      <div
+        class="flex flex-col p-5 w-full h-auto items-center shadow-[0_4px_20px_rgba(0,0,0,0.25)] rounded-3xl"
+      >
+        <img src="check.svg" alt="" class="w-[90px] h-[90px]" />
+        <h1 class="text-2xl font-bold font-display py-5">
+          Thank you for you order
+        </h1>
+        <div class="mb-5">
+          <p class="">Order number : 1011009954789453</p>
+          <p class="">Purchase date : 24 Aug 2026</p>
+        </div>
+        <div
+          class="grid grid-row divide-y-2 devide-solid divide-primary/40 items-center bg-[#FFFFFF] w-full h-auto rounded-3xl px-5"
+        >
+          <div class="text-center text-2xl font-bold font-display py-5 w-full">
+            Order Sumary
+          </div>
+          <div class="text-center py-2 w-full">
+            <h2 class="font-semibold">Order</h2>
+            <ul class="flex flex-col gap-1 font-body">
+              <li class="flex flex-row justify-between px-2">
+                <p class="">Products 1</p>
+                <p class="">THB 600.00</p>
+              </li>
+              <li class="flex flex-row justify-between px-2">
+                <p class="">Quantity: 10 pcs</p>
+              </li>
+              <li class="flex flex-row justify-between px-2">
+                <p class="">Products 2</p>
+                <p class="">THB 350.00</p>
+              </li>
+              <li class="flex flex-row justify-between px-2">
+                <p class="">Quantity: 5 pcs</p>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center py-2 w-full">
+            <h2 class="font-semibold">Delivery Address</h2>
+            <p class="text-left">
+              132 ,ChalermPrakiate Rama9 Rd <br />
+              Dokmai ,Prawet,<br />
+              Bangkok 10250
+            </p>
+          </div>
+          <div class="text-center text-neutral/90 py-5 w-full">
+            <ul class="flex flex-col gap-1">
+              <li class="flex flex-row justify-between px-2">
+                <p class="font-display text-lg">Service fee</p>
+                <p class="font-body">THB 20.00</p>
+              </li>
+              <li class="flex flex-row justify-between px-2">
+                <p class="font-display text-lg">Delivery fee</p>
+                <p class="font-body">THB 20.00</p>
+              </li>
+              <li class="flex flex-row justify-between px-2">
+                <p class="font-display text-xl font-semibold">Total Paid</p>
+                <p class="font-body">THB 1,000.00</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="p-2">
+          <ul class="flex flex-col items-center justify-center gap-2">
+            <li>
+              <button class="bg-primary p-2 w-[210px] rounded-full text-[#FFFFFF] shadow-md hover:bg-primary/90" href="#myOder">View my order</button>
+            </li>
+            <li>
+              <button class="border-1 border-solid p-2 w-[210px] rounded-full text-primary shadow-md hover:text-primary/80" href="#myOder">Back to shop</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

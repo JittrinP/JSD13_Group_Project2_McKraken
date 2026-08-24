@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Atelier de Flora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#586158',
+                        secondary: '#F9F6F0',
+                        tertiary: '#F3F3F0',
+                        neutral: '#4A4A4A',
+                    },
+                    fontFamily: {
+                        serif: ['"Literata"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<!-- ปรับ body ให้จัดวางแบบ items-start บนมือถือ เพื่อให้มีระยะห่างด้านบนพอดี และขยับมา center เมื่อจอใหญ่ขึ้น -->
+<body class="bg-secondary font-sans text-neutral min-h-screen flex sm:items-center justify-center pt-8 sm:pt-0 p-4 antialiased">
+
+    <!-- การ์ด Login -->
+    <div class="bg-white rounded-[2rem] w-full max-w-[420px] my-auto sm:my-0 flex flex-col justify-center px-8 py-10 border border-black/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+        
+        <!-- Logo -->
+        <div class="flex justify-center mb-3">
+            <svg width="36" height="42" viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Leaves -->
+                <path d="M17.5 41C17.5 41 0 35 0 21C11 21 17.5 31 17.5 41Z" fill="#586158"/>
+                <path d="M18.5 41C18.5 41 36 35 36 21C25 21 18.5 31 18.5 41Z" fill="#586158"/>
+                
+                <!-- Flower Base -->
+                <g mask="url(#hole)">
+                    <circle cx="18" cy="14" r="8" fill="#586158"/>
+                    <circle cx="18" cy="5" r="5" fill="#586158"/>
+                    <circle cx="25.5" cy="9" r="5" fill="#586158"/>
+                    <circle cx="25.5" cy="18" r="5" fill="#586158"/>
+                    <circle cx="18" cy="22" r="5" fill="#586158"/>
+                    <circle cx="10.5" cy="18" r="5" fill="#586158"/>
+                    <circle cx="10.5" cy="9" r="5" fill="#586158"/>
+                </g>
+                
+                <!-- Mask for hole -->
+                <defs>
+                    <mask id="hole">
+                        <rect width="36" height="42" fill="white"/>
+                        <circle cx="18" cy="14" r="4.5" fill="black"/>
+                    </mask>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="font-serif text-3xl text-primary font-bold tracking-tight mb-2">Atelier de Flora</h1>
+            <p class="text-[13px] text-neutral/80">Welcome to</p>
+        </div>
+
+        <!-- Form -->
+        <form class="space-y-5">
+            <div>
+                <label class="block text-[13px] font-medium text-neutral mb-2">Email Address</label>
+                <input type="email" placeholder="jane.doe@example.com" 
+                    class="w-full bg-tertiary/70 border border-gray-200 text-neutral rounded-lg px-4 py-3 text-[14px] focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-neutral/40">
+            </div>
+
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <label class="block text-[13px] font-medium text-neutral">Password</label>
+                    <a href="#" class="text-[12px] text-neutral hover:text-primary underline underline-offset-2">Forget password?</a>
+                </div>
+                <input type="password" placeholder="••••••••" 
+                    class="w-full bg-tertiary/70 border border-gray-200 text-neutral rounded-lg px-4 py-3 text-[18px] tracking-[0.2em] focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-neutral/40 placeholder:tracking-[0.2em] h-[48px]">
+            </div>
+
+            <button type="submit" 
+                class="w-full bg-primary text-white rounded-lg px-4 py-3.5 text-[14px] font-medium hover:bg-primary/90 transition-all flex justify-center items-center gap-2 mt-8 shadow-sm">
+                Login &rarr;
+            </button>
+        </form>
+
+        <div class="mt-8 text-center text-[13px]">
+            <span class="text-neutral/80">Don't have an account ?</span>
+            <a href="#" class="text-primary font-semibold hover:underline ml-1">Register</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
