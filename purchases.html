@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purchases</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary:     '#586158',
+          neutral:     '#4A4A4A',
+          surface:     '#FBF9F8',
+          tertiary:    '#F3F3F0',
+          destructive: '#8F4748',
+          disabled:    'rgba(68,72,67,0.3)',
+          line:        '#C4C7C1',
+          'line-soft': '#DBD9D9',
+          chip:        '#E5E2DC',
+          muted:       '#5F5E5A',
+          ink:         '#1B1C1C',
+        },
+        fontFamily: {
+          serif: ['Literata', 'serif'],
+          sans:  ['"Plus Jakarta Sans"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+</head>
+
+<body class="bg-tertiary font-sans antialiased">
+
+  <!-- ============ MAIN ============ -->
+  <main class="flex w-full flex-col items-center gap-6 p-4 md:items-stretch md:gap-0 md:px-16 md:py-12">
+
+    <!-- mobile only -->
+    <nav class="flex w-full items-center justify-center gap-2.5 md:hidden">
+      <a href="#" class="whitespace-nowrap rounded-full bg-surface px-5 py-1 text-base font-semibold leading-9 text-primary">My account</a>
+      <a href="#" class="whitespace-nowrap rounded-full bg-surface px-5 py-1 text-base font-semibold leading-9 text-primary">Purchase</a>
+      <a href="#" aria-current="page" class="whitespace-nowrap rounded-full bg-primary px-5 py-1 text-base font-semibold leading-9 text-white">Bouquet</a>
+    </nav>
+
+    <h1 class="w-full font-serif text-[28px] font-semibold leading-9 text-primary md:pb-6">Purchases</h1>
+
+    <div class="w-full md:flex md:items-start md:justify-between md:gap-6">
+
+      <!-- ===== SIDEBAR (desktop only) ===== -->
+      <aside class="hidden w-[322px] shrink-0 flex-col items-center justify-center gap-6 rounded-xl border border-line-soft/50 bg-surface p-6 shadow-sm md:flex">
+        <nav class="flex w-full flex-col gap-1">
+          <a href="#" class="flex w-full items-center gap-3 rounded-lg p-3 text-base leading-6 text-primary">
+            <img src="/images/icon-user.svg" alt="" class="h-4 w-4">My Account
+          </a>
+          <a href="#" aria-current="page" class="flex w-full items-center gap-3 rounded-lg bg-primary p-3 text-base leading-6 text-white">
+            <img src="/images/icon-car.svg" alt="" class="h-4 w-[22px]">Purchases
+          </a>
+          <a href="#" class="flex w-full items-center gap-3 rounded-lg p-3 text-base leading-6 text-primary">
+            <img src="/images/icon-flower.svg" alt="" class="h-[21px] w-[18px]">Bouquet
+          </a>
+          <a href="#" class="flex w-full items-center gap-3 rounded-lg p-3 text-base leading-6 text-primary">
+            <img src="/images/icon-address.svg" alt="" class="h-5 w-4">My Address
+          </a>
+          <a href="#" class="flex w-full items-center gap-3 rounded-lg p-3 text-base leading-6 text-primary">
+            <img src="/images/icon-heart.svg" alt="" class="h-[18px] w-5">Favorite
+          </a>
+        </nav>
+
+        <hr class="w-full border-t border-line/30">
+
+        <nav class="flex w-full flex-col gap-1">
+          <a href="#" class="flex w-full items-center gap-3 rounded-lg p-3 text-base leading-6 text-primary">
+            <img src="/images/icon-settings.svg" alt="" class="h-5 w-5">Setting
+          </a>
+          <a href="#" class="flex w-full items-center gap-3 rounded-lg p-3 text-base leading-6 text-primary">
+            <img src="/images/icon-question-mark.svg" alt="" class="h-5 w-5">Help
+          </a>
+        </nav>
+      </aside>
+
+      <!-- ===== ORDER LIST ===== -->
+      <section class="w-full overflow-hidden rounded-xl border border-line-soft/50 bg-surface px-6 shadow-sm md:min-w-0 md:flex-1 md:p-6">
+
+        <!-- column headers (desktop only) -->
+        <div class="hidden w-full items-center border-b border-line/30 pl-3 md:flex">
+          <span class="flex-1 py-3 text-sm font-semibold leading-5 tracking-[0.7px] text-primary">Product</span>
+          <span class="w-[134px] py-3 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-primary">Status</span>
+          <span class="w-[118px] py-3 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-primary">Quantity</span>
+          <span class="w-[118px] py-3 text-center text-sm font-semibold leading-5 tracking-[0.7px] text-primary">Price</span>
+          <span class="w-[96px] py-3 text-right text-sm font-semibold leading-5 tracking-[0.7px] text-primary">Action</span>
+        </div>
+
+        <ul class="w-full">
+
+          <!-- Row 1 -->
+          <li class="flex flex-col items-end gap-3.5 border-b border-line/30 py-5 md:flex-row md:items-center md:gap-0 md:py-6 md:pl-3">
+            <div class="flex w-full items-center justify-between md:flex-1 md:justify-start md:gap-6">
+              <span class="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-line-soft p-px shadow-sm">
+                <img src="https://placehold.co/62x62/png" alt="Cozy Meadow Bouquet" class="h-full w-full object-contain">
+              </span>
+              <span class="whitespace-nowrap font-serif text-[18px] leading-7 text-neutral md:text-xl">Cozy Meadow Bouquet</span>
+            </div>
+
+            <div class="flex w-full items-center justify-between md:contents">
+              <span class="flex items-center gap-1 rounded-full bg-chip px-2 py-1 md:w-[134px] md:justify-center">
+                <span class="h-1.5 w-1.5 rounded-full bg-neutral md:h-2 md:w-2"></span>
+                <span class="whitespace-nowrap text-[10px] font-medium leading-4 text-neutral md:text-xs">Process</span>
+              </span>
+
+              <span class="flex items-center justify-end gap-2 md:contents">
+                <span class="whitespace-nowrap text-sm leading-6 text-primary md:w-[118px] md:text-center md:text-base">
+                  <span class="md:hidden">1 Item :</span><span class="hidden md:inline">3</span>
+                </span>
+                <span class="whitespace-nowrap text-sm font-semibold leading-5 tracking-[0.7px] text-primary md:w-[118px] md:text-center">$32.00</span>
+              </span>
+            </div>
+
+            <div class="md:flex md:w-[96px] md:justify-end">
+              <button type="button" class="rounded-full bg-destructive px-5 py-1 text-center text-xs font-semibold leading-5 tracking-[0.7px] text-surface md:rounded-none md:bg-transparent md:p-0 md:font-medium md:tracking-normal md:leading-4 md:text-destructive md:underline md:decoration-primary/30">Cancel</button>
+            </div>
+          </li>
+
+          <!-- Row 2 -->
+          <li class="flex flex-col items-end gap-3.5 border-b border-line/30 py-5 md:flex-row md:items-center md:gap-0 md:py-6 md:pl-3">
+            <div class="flex w-full items-center justify-between md:flex-1 md:justify-start md:gap-6">
+              <span class="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-line-soft p-px shadow-sm">
+                <img src="https://placehold.co/62x62/png" alt="Cozy Meadow Bouquet" class="h-full w-full object-contain">
+              </span>
+              <span class="whitespace-nowrap font-serif text-[18px] leading-7 text-neutral md:text-xl">Cozy Meadow Bouquet</span>
+            </div>
+
+            <div class="flex w-full items-center justify-between md:contents">
+              <span class="flex items-center gap-1 rounded-full bg-primary px-2 py-1 md:w-[134px] md:justify-center">
+                <span class="h-1.5 w-1.5 rounded-full bg-white md:h-2 md:w-2"></span>
+                <span class="whitespace-nowrap text-[10px] font-medium leading-4 text-white md:text-xs">Shipped</span>
+              </span>
+
+              <span class="flex items-center justify-end gap-2 md:contents">
+                <span class="whitespace-nowrap text-sm leading-6 text-primary md:w-[118px] md:text-center md:text-base">
+                  <span class="md:hidden">1 Item :</span><span class="hidden md:inline">3</span>
+                </span>
+                <span class="whitespace-nowrap text-sm font-semibold leading-5 tracking-[0.7px] text-primary md:w-[118px] md:text-center">$32.00</span>
+              </span>
+            </div>
+
+            <div class="md:flex md:w-[96px] md:justify-end">
+              <button type="button" disabled class="cursor-not-allowed rounded-full bg-disabled px-5 py-1 text-center text-xs font-semibold leading-5 tracking-[0.7px] text-surface md:rounded-none md:bg-transparent md:p-0 md:font-medium md:tracking-normal md:leading-4 md:text-disabled md:underline md:decoration-primary/30">Cancel</button>
+            </div>
+          </li>
+
+          <!-- Row 3 -->
+          <li class="flex flex-col items-end gap-3.5 py-5 md:flex-row md:items-center md:gap-0 md:py-6 md:pl-3">
+            <div class="flex w-full items-center justify-between md:flex-1 md:justify-start md:gap-6">
+              <span class="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-line-soft p-px shadow-sm">
+                <img src="https://placehold.co/62x62/png" alt="Cozy Meadow Bouquet" class="h-full w-full object-contain">
+              </span>
+              <span class="whitespace-nowrap font-serif text-[18px] leading-7 text-neutral md:text-xl">Cozy Meadow Bouquet</span>
+            </div>
+
+            <div class="flex w-full items-center justify-between md:contents">
+              <span class="flex items-center gap-1 rounded-full bg-chip px-2 py-1 md:w-[134px] md:justify-center">
+                <span class="h-1.5 w-1.5 rounded-full bg-neutral md:h-2 md:w-2"></span>
+                <span class="whitespace-nowrap text-[10px] font-medium leading-4 text-neutral md:text-xs">Process</span>
+              </span>
+
+              <span class="flex items-center justify-end gap-2 md:contents">
+                <span class="whitespace-nowrap text-sm leading-6 text-primary md:w-[118px] md:text-center md:text-base">
+                  <span class="md:hidden">1 Item :</span><span class="hidden md:inline">3</span>
+                </span>
+                <span class="whitespace-nowrap text-sm font-semibold leading-5 tracking-[0.7px] text-primary md:w-[118px] md:text-center">$32.00</span>
+              </span>
+            </div>
+
+            <div class="md:flex md:w-[96px] md:justify-end">
+              <button type="button" class="rounded-full bg-destructive px-5 py-1 text-center text-xs font-semibold leading-5 tracking-[0.7px] text-surface md:rounded-none md:bg-transparent md:p-0 md:font-medium md:tracking-normal md:leading-4 md:text-destructive md:underline md:decoration-primary/30">Cancel</button>
+            </div>
+          </li>
+
+        </ul>
+      </section>
+    </div>
+  </main>
+
+</body>
+</html>
